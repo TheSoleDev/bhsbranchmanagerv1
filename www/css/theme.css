@@ -6,7 +6,7 @@
     width: 100%;
 }
 .inner-container{
-
+    min-height: 600px;
     background-color: #e7fded;
     padding: 15px !important;
     margin: 60px 15px 60px 15px;
@@ -177,6 +177,16 @@ a{
 
 .line-height-1{
     line-height: 1;
+}
+.ui-icon{
+    background: none !important;
+}
+.ui-icon-caret-r:before{
+    font-family: 'FontAwesome' !important;
+    content: '\f105' !important;
+    font-size: 26px;
+    line-height: 0.8;
+    padding-left: 7px;
 }
 
 .text-9{
