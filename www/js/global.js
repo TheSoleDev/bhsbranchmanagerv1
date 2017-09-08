@@ -1,5 +1,5 @@
 
-$('.dashboard-container').css('height',(window.innerHeight) - 70 );
+
 
     var provinces = JSON.parse(localStorage.getItem('provinces'));
     var branches = JSON.parse(localStorage.getItem('branches_data'));
