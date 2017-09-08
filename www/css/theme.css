@@ -435,6 +435,9 @@ a{
 .text-16{
     font-size: 16px !important;
 }
+.text-20{
+    font-size: 20px !important;
+}
 .text-green{
     color: #4CAF50 !important;
 }
@@ -464,7 +467,14 @@ a.no-underline{
     color: #fff !important;
     text-shadow: 0 1px 0 #4CAF50 !important;
 }
+.ui-navbar li .ui-btn{
 
+    padding: 15px 2px;
+}
+.ui-navbar li .ui-btn i{
+    font-size: 20px !important;
+    line-height: 1.5 !important;
+}
 .ui-bar-a, .ui-page-theme-a .ui-bar-inherit, html .ui-bar-a .ui-bar-inherit, html .ui-body-a .ui-bar-inherit, html body .ui-group-theme-a .ui-bar-inherit{
     text-shadow: none !important;
 }

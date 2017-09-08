@@ -3,7 +3,7 @@
 
     var provinces = JSON.parse(localStorage.getItem('provinces'));
     var branches = JSON.parse(localStorage.getItem('branches_data'));
-    
+
 var img_marker = 'img/marker-icon.png';
 var arr_provinces = [];
 var arr_branches = [];
@@ -72,11 +72,11 @@ function getBranchDetailsById(id){
 	
 	var branches = JSON.parse(localStorage.getItem('branches_data'));
 
-console.log(branches);
+
 	var result = branches.filter(function (data) {
 	    return data.details.id == id;
 	});
-console.log(result,id);
+
 	return result[0];
 }
 

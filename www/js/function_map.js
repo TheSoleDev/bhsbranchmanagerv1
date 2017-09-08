@@ -144,7 +144,7 @@ $('#map-screen').on('click','.linkBranchDetails',function(e) {
     localStorage.setItem("selected-branch-position", $(this).data('position'));
     localStorage.setItem("reference-page", 'branch.html');   
 
-    window.location = "#branch-info";
+    window.location = 'branch-details.html';
 
 });
 
