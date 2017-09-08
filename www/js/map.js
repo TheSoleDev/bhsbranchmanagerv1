@@ -51,6 +51,9 @@ $('#map-screen').on('change',".rb-menu-map",function(e) {
 
             });
         }
+        else{
+            alert('Your location cannot be determined. ');
+        }
         $('#menu-panel').removeClass('ui-panel-open').addClass('ui-panel-close');
     }
 });

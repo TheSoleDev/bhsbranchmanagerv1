@@ -444,6 +444,13 @@ a{
 .text-white{
     color: #ffffff !important;
 }
+.text-blue{
+    color: #008CBA !important;
+}
+.text-red{
+    color: #f44336 !important;
+}
+
 .text-center{
     text-align: center !important;
 }

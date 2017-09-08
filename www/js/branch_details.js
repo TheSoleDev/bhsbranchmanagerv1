@@ -12,7 +12,9 @@ $( document ).on( "pagebeforeshow", "#branch-details-page", function() {
     
     $('#branch_name').html(branch_info.details.branch_name);
     $('#branch_address').html(branch_info.details.address);
-    
+    if(branch_info.details.cover_image != '' && branch_info.details.cover_image != null) $('#branch_cover_image').attr('src', 'http://app.banahawhealsspabranches.com/storage/'+branch_info.details.cover_image);
+
+
     var arr_str = [];
 
     if(branch_info.details.tel_no_1 != '' && branch_info.details.tel_no_1 != null)        arr_str.push('<div class="mt-10"><strong>Telephone No.: </strong> <div class="info">'+branch_info.details.tel_no_1+' <a href="tel:'+branch_info.details.tel_no_1+'" class="linkBranchDetails button-small btn-green"> Call Now </a></div></div>');

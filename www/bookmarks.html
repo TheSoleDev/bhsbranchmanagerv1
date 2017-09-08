@@ -19,35 +19,35 @@
     </head>
     <body>
 
-        <div data-role="page"  class="page-bg" id="promo-screen">
+        <div data-role="page"  class="page-bg" >
             <div data-role="header" id="applicationHeader" data-theme="b" data-position="fixed" data-tap-toggle="false" data-id="navStay">
                <a href="index.html" data-ajax="false" class="btn-back ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-arrow-l"> Back</a>               
                <h1 class="ui-title page-title" role="heading" aria-level="1"><img src="img/header-logo.png"></h1>
 
             </div>
-            <div role="main" class="ui-content" data-position="fixed">
+            <div role="main" class="ui-content" data-position="fixed" id="bookmark-section">
 
-                <ul data-role="listview" data-filter="true" data-filter-placeholder="Search branch..." data-split-icon="gear" data-split-theme="a" data-inset="true">
+                <ul data-role="listview" data-filter="true" data-filter-placeholder="Search bookmarks..." data-split-icon="gear" data-split-theme="a" data-inset="true">
                     <li><a href="#">
-                        <h2>Broken Bells</h2>
+                        <h2>BHS - Tandand Sora</h2>
                         </a>
                     <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Purchase album</a>
                     </li>
                     <li><a href="#">
-                            <h2>Warning</h2>
+                            <h2>BHS - Pagasa</h2>
                         </a>
                         <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Purchase album</a>
                     </li>
                     <li><a href="#">
-                            <h2>Wolfgang Amadeus Phoenix</h2>
+                            <h2>BHS - Gen. T. De Leon</h2>
                         </a>
                         <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Purchase album</a>
                     </li>
                 </ul>
 
                 <div data-role="popup" id="purchase" data-theme="a" data-overlay-theme="b" class="ui-content" style="max-width:340px; ">
-                    <a href="index.html" data-rel="back" class="ui-shadow ui-btn ui-corner-all ui-icon-carat-r ui-btn-icon-left ">View Branch Info</a>
-                    <a href="index.html" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-b ui-icon-delete ui-btn-icon-left">Delete this Item</a>
+                    <a href="#" data-rel="back" class="ui-shadow ui-btn ui-corner-all ui-icon-carat-r ui-btn-icon-left btn-green">View Branch Info</a>
+                    <a href="#" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-b ui-icon-delete ui-btn-icon-left btn-red">Delete this Item</a>
                 </div>
 
             </div>
@@ -68,7 +68,7 @@
     
 
         <script type="text/javascript" src="js/global.js"></script> 
-       
+        <script type="text/javascript" src="js/bookmarks.js"></script> 
         <script type="text/javascript">
 
         </script>
