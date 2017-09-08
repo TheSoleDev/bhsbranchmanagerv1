@@ -1,31 +1,24 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+        <link rel="stylesheet" href="css/vendor/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="css/vendor/jquery.mobile-1.4.5.css" />
+        <link rel="stylesheet" type="text/css" href="css/theme.css" />        
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
 
-<head>
-    <meta charset="utf-8" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="msapplication-tap-highlight" content="no" />
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
-    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
-    <!-- Good default declaration:
-    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
-    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-        * Enable inline JS: add 'unsafe-inline' to default-src
-        * Enable eval(): add 'unsafe-eval' to default-src
-    * Create your own at http://cspisawesome.com
-    -->
-    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
-    <link rel="stylesheet" type="text/css" href="css/vendor/jquery.mobile.custom.structure.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/vendor/jquery.mobile.custom.theme.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/vendor/font-awesome.min.css" />    
-    <link rel="stylesheet" type="text/css" href="css/theme.css" />
-    <link rel="stylesheet" type="text/css" href="css/index.css" /> 
-    <title>Banahaw Heals Spa - Branch Locator</title>
-</head>
+        <title>Banahaw Heals Spa</title>
+                <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>        
+        <script type="text/javascript" src="js/vendor/jquery-1.11.3.js"></script>
+        <script type="text/javascript" src="js/vendor/jquery.mobile-1.4.5.js"></script>  
 
-<body>
+    </head>
+    <body>
 
     <div data-role="page" class="page-bg">
         <div class="ui-content dashboard-container" role="main">
@@ -34,7 +27,7 @@
                     <img src="img/main_logo.png" width="100%">
                 </div>
                 <div class="ui-grid-a">
-                   <a href="locator.html" data-role="button" class="button btn-100perc btn-green btn-left"><i class="fa fa-search" aria-hidden="true"></i> Branch Locator</a>
+                   <a href="branch.html" data-role="button" class="button btn-100perc btn-green btn-left"><i class="fa fa-search" aria-hidden="true"></i> Branch Locator</a>
                 </div>
                 <div class="ui-grid-a">
                    <a href="services.html" data-role="button" class="button btn-100perc btn-green btn-left"><i class="fa fa-sign-language" aria-hidden="true"></i> Services</a>
@@ -51,20 +44,24 @@
             </div>
         </div>
         <div data-role="footer" class="dashboard-footer text-center text-12">
-        App v1.0.2 | Copyright &copy; 2017 <br /> Powered by <a href="#">Active System</a>
+        App v1.0.2 | Copyright &copy; 2017 <br /> Powered by <a href="#" data-role="none">Active System</a>
         
         </div><!-- /footer -->
     </div>
 
+        <!-- 
+        <div class="container_16">
+            <article class="grid_16">
+                <div class="item rounded dark">
+                    <div id="map_canvas" class="map rounded"></div>
+                </div>
+                <div id="radios" class="item gradient rounded shadow" style="margin:5px;padding:5px 5px 5px 10px;"></div>
+            </article>
+        </div>       -->
+    
+        <script type="text/javascript" src="js/global.js"></script>        
+        <script type="text/javascript">
 
-
-    <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="js/vendor/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="js/vendor/jquery.mobile.custom.min.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
-    <!-- <script type="text/javascript">
-        app.initialize();
-    </script> -->
-</body>
-
+        </script>
+    </body>
 </html>

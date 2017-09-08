@@ -27,61 +27,52 @@
 
 <body>
 
-    <div data-role="page" class="page-bg">
+    <div data-role="page">
+
         <div data-role="toolbar" data-type="header" class="header-toolbar">
             <a href="index.html" class="ui-toolbar-header-button-left ui-button ui-button-inline ui-mini ui-corner-all text-green"><i class="fa fa-angle-left" aria-hidden="true"></i> Back</a>
             <h1><img src="img/header-logo.png"></h1>
 
         </div>
 
+        <div role="main" class="ui-content inner-container">
 
-            <div role="main" class="ui-content" data-position="fixed">
-
-
-
-<form class="ui-filterable">
-    <input id="rich-autocomplete-input" data-type="search" placeholder="Search ticker or firm name...">
-</form>
-<ul data-role="listview" data-filter="true" data-inset="true" data-input="#rich-autocomplete-input">
-    <li data-filtertext="NASDAQ:ADBE Adobe Systems Incorporated"><a href="#">Adobe</a></li>
-    <li data-filtertext="NASDAQ:AMZNL Amazon.com, Inc."><a href="#">Amazon</a></li>
-    <li data-filtertext="NASDAQ:AAPL Apple Inc."><a href="#">Apple</a></li>
-    <li data-filtertext="NASDAQ:GOOG Google Inc."><a href="#">Google</a></li>
-    <li data-filtertext="NYSE:IBM Intl. International Business Machines Corp."><a href="#">IBM</a></li>
-    <li data-filtertext="NASDAQ:MSFT Microsoft Corporation"><a href="#">Microsoft</a></li>
-    <li data-filtertext="NASDAQ:YHOO Yahoo! Inc."><a href="#">Yahoo</a></li>
-    <li data-filtertext="USA U.S.A. United States of America"><a href="#">United States</a></li>
-</ul>
-            
-                <label class="inner-title"><strong>Branch List</strong></label>
-                <form>
-                    <input data-type="search" id="searchForCollapsibleSetChildren" placeholder="Search Branch">
-                </form>
-                <div data-role="collapsibleset"  data-collapsed-icon="carat-r" data-expanded-icon="carat-d" data-filter="true" data-children="> div, > div div ul li" data-inset="true" id="brachlist" data-input="#searchForCollapsibleSetChildren">
-                  
-                </div>
-
+            <div class="ui-grid-solo">
+                <div class="ui-block-a"><h4 class="mb-10 mt-10">Bookmarks</h4></div>
             </div>
+
+              <div class="ui-grid-solo">
+                <div class="ui-block-a">  
+
+                <ul data-role="listview" class="mt-10 ml-0 mr-0">
+                    <li><a href="#">BHS Tandang Sora</a></li>
+                    <li><a href="#">BHS Pagasa</a></li>
+                    <li><a href="#">BHS Gen. T. De Leon</a></li>
+                </ul>
+                </div>
+            </div>
+
+
+        </div><!-- /content -->
 
 
         <div data-role="toolbar" data-type="footer" class="nav-glyphish-example footer-toolbar" data-theme="b">
             <div data-role="navbar" class="nav-glyphish-example" data-grid="d">
                 <ul>
-                    <li><a href="#" id="locator"><i class="text-16 fa fa-search" aria-hidden="true"></i><div class="text-9">Locator</div></a></li>
-                    <li><a href="#" id="services" class="ui-button-active"><i class="text-16 fa fa-sign-language" aria-hidden="true"></i><div class="text-9">Services</div></a></li>
-                    <li><a href="#" id="bookmark"><i class="text-16 fa fa-bookmark" aria-hidden="true"></i><div class="text-9">Bookmark</div></a></a></li>
-                    <li><a href="#" id="contactus"><i class="text-16 fa fa-envelope-o" aria-hidden="true"></i><div class="text-9">Contact Us</div></a></li>
+                    <li><a href="localtor.html" id="locator"><i class="text-16 fa fa-search" aria-hidden="true"></i><div class="text-9">Locator</div></a></li>
+                    <li><a href="services.html" id="services"><i class="text-16 fa fa-sign-language" aria-hidden="true"></i><div class="text-9">Services</div></a></li>
+                    <li><a href="bookmarks.html" id="bookmark" class="ui-button-active"><i class="text-16 fa fa-bookmark" aria-hidden="true"></i><div class="text-9">Bookmark</div></a></a></li>
+                    <li><a href="contact-us.html" id="contactus"><i class="text-16 fa fa-envelope-o" aria-hidden="true"></i><div class="text-9">Contact Us</div></a></li>
                 </ul>
             </div>
         </div>
-    </div>
 
+    </div><!-- /page -->
 
 
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/vendor/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/vendor/jquery.mobile.custom.min.js"></script>
-    <script type="text/javascript" src="js/data.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <!-- <script type="text/javascript">
         app.initialize();

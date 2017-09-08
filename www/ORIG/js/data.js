@@ -1,5 +1,4 @@
-$(document).ready(function(){
-
+$( document ).on( "pagebeforeshow", "#locator-screen", function() {
 
     $.getJSON("http://branchmanager.local/data/fetchbranches").done(function(data){
 
@@ -49,32 +48,31 @@ $(document).ready(function(){
 
         var filtertext = '';
 
-        // $.each(branch, function(key, value) {
+        $.each(JSON.parse(localStorage.getItem('branch_data')), function(key, value) {
 
-        //     if(value.province == tag){
-        //        filtertext = filtertext + ' ' + value.branch_name;
-        //       // console.log(filtertext);
-        //     }
+            if(value.details.province == tag){
+               filtertext = filtertext + ' ' + value.details.branch_name;
+              // console.log(filtertext);
+            }
 
-        // });
+        });
 
         arr_str.push('<div data-role="collapsible" class="tag-item" data-filtertext="'+tag + ' ' + filtertext + '">');
             arr_str.push('<h3>'+tag+'</h3>');
-            // arr_str.push('<ul data-role="listview"  data-inset="false">');
+            arr_str.push('<ul data-role="listview"  data-inset="false">');
 
+                $.each(JSON.parse(localStorage.getItem('branch_data')), function(key, value) {
 
-            //     $.each(branch, function(key, value) {
-
-            //         if( tag == value.province){
-            //             if(value.lat != null && value.long != null)
-            //             {
-            //                 arr_str.push('<li class="sub-item" data-filtertext="'+tag + ' ' + value.branch_name + '"><a href="#" class="showDetails" data-position="'+value.lat + ',' + value.long+'" data-branch="'+value.branch_name+'" data-id="'+value.id+'">'+value.branch_name+'</a></li>');
-            //             }
-            //         }
+                    if( tag == value.details.province){
+                        if(value.details.map_lat != null && value.details.map_long != null)
+                        {
+                            arr_str.push('<li class="sub-item" data-filtertext="'+tag + ' ' + value.details.branch_name + '"><a href="#" class="showDetails" data-position="'+value.details.map_lat + ',' + value.details.map_long+'" data-branch="'+value.details.branch_name+'" data-id="'+value.details.id+'">'+value.details.branch_name+'</a></li>');
+                        }
+                    }
                     
-            //     });
+                });
 
-            // arr_str.push('</ul>');
+            arr_str.push('</ul>');
         arr_str.push('</div>');
 
     });

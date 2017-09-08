@@ -1,14 +1,3 @@
-*:focus {
-    outline: none !important;
-     -moz-box-shadow: none !important;
- -webkit-box-shadow: none !important;
- box-shadow: none !important;
-}
-.ui-focus {
- -moz-box-shadow: none !important;
- -webkit-box-shadow: none !important;
- box-shadow: none !important;
-}
 .page-bg {
     /*background: url(../img/bg-medium-screen.png) #95e705 top repeat-x;*/
     height: 100%;

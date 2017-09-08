@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="css/vendor/jquery.mobile-1.4.5.css" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+
+        <title>Banahaw Heals Spa</title>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>        
+        <script type="text/javascript" src="js/vendor/jquery-1.11.3.js"></script>
+        <script type="text/javascript" src="js/vendor/jquery.mobile-1.4.5.js"></script>  
+    </head>
+    <body>
+
+        <div data-role="page"  class="page-bg" id="promo-screen">
+            <div data-role="header" id="applicationHeader" data-theme="b" data-position="fixed" data-tap-toggle="false" data-id="navStay">
+               <a href="index.html" data-ajax="false" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-home">Home </a>                  
+               <h1 class="ui-title page-title" role="heading" aria-level="1">Banahaw Heals Spa</h1>
+            </div>
+            <div role="main" class="ui-content" data-position="fixed">
+                <div class="contact-container">
+                             
+                    <div class="text-content">
+                        <h2>CONTACT US</h2>
+                        <p><strong>For any inquiries, comments, and suggestions.</strong></p>
+                        <br />
+                        <form>
+                        <p>
+                            <label for="contact-type" class="select">Contacting us about?</label>
+                            <select name="contact-type" id="contact-type">
+                                <option value="Inquiries">Inquiries</option>
+                                <option value="Suggestions">Suggestions</option>
+                                <option value="Complaints">Complaints</option>
+                                <option value="Franchise">Franchise</option>
+                            </select>
+                        </p>
+                        <p>
+                            <label for="txt_branch_name">Branch Name:</label>
+                            <input type="text" name="txt_branch_name" id="txt_branch_name" value="">
+                        </p>                        
+                        <p>
+                            <label for="txt_fullname">Full name:</label>
+                            <input type="text" name="txt_fullname" id="txt_fullname" value="">
+                        </p>
+                        <p>
+                            <label for="txt_email">Email address:</label>
+                            <input type="email" name="txt_email" id="txt_email" value="">
+                        </p>                        
+                        <p>
+                            <label for="mobile_no">Mobile No.:</label>
+                            <input type="tel" name="mobile_no" id="mobile_no" value="">
+                        </p>
+                        <p>
+                            <label for="txt_message">Message:</label>
+                            <textarea cols="40" rows="10" name="txt_message" id="txt_message"></textarea>
+                        </p>
+                        <br />
+                        <p>
+                            
+                            <button type="submit" class="ui-btn ui-shadow ui-corner-all ui-btn-b">Submit</button>
+                        </p>
+                        </form>
+                    </div>        
+                </div>
+            </div>
+            <div data-role="footer" style="overflow:hidden;" data-position="fixed" data-tap-toggle="false">
+                <div  class="footer-text" >
+                    Last Update: 15 Nov 2015 03:37:20 PM  | App v1.0 
+                </div>                
+            </div><!-- /footer -->
+        </div>
+     
+
+        <script type="text/javascript" src="js/global.js"></script>
+        <script type="text/javascript" src="js/promo.js"></script>    
+
+        <script type="text/javascript">
+
+        </script>
+
+    </body>
+</html>
