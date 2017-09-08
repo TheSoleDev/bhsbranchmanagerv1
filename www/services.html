@@ -17,11 +17,13 @@
     * Create your own at http://cspisawesome.com
     -->
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
-    <link rel="stylesheet" type="text/css" href="css/vendor/jquery.mobile.custom.structure.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/vendor/jquery.mobile.custom.theme.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/vendor/font-awesome.min.css" />    
-    <link rel="stylesheet" type="text/css" href="css/theme.css" />
-    <link rel="stylesheet" type="text/css" href="css/index.css" /> 
+        <link rel="stylesheet" href="css/vendor/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="css/vendor/jquery.mobile-1.4.5.css" />
+        <link rel="stylesheet" type="text/css" href="css/theme.css" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+
+        <title>Banahaw Heals Spa</title>
+                 
     <title>Banahaw Heals Spa - Branch Locator</title>
 </head>
 
@@ -117,23 +119,27 @@
         </div><!-- /content -->
 
 
-        <div data-role="toolbar" data-type="footer" class="nav-glyphish-example footer-toolbar" data-theme="b">
-            <div data-role="navbar" class="nav-glyphish-example" data-grid="d">
+        <div data-role="footer" style="overflow:hidden;" data-position="fixed" data-tap-toggle="false">
+            <div data-role="navbar" id="footer-nav-item">
                 <ul>
-                    <li><a href="localtor.html" id="locator"><i class="text-16 fa fa-search" aria-hidden="true"></i><div class="text-9">Locator</div></a></li>
-                    <li><a href="services.html" id="services" class="ui-button-active"><i class="text-16 fa fa-sign-language" aria-hidden="true"></i><div class="text-9">Services</div></a></li>
-                    <li><a href="bookmarks.html" id="bookmark"><i class="text-16 fa fa-bookmark" aria-hidden="true"></i><div class="text-9">Bookmark</div></a></a></li>
-                    <li><a href="contact-us.html" id="contactus"><i class="text-16 fa fa-envelope-o" aria-hidden="true"></i><div class="text-9">Contact Us</div></a></li>
+                    <li><a href="localtor.html" data-ajax="false" id="locator"><i class="text-16 fa fa-search" aria-hidden="true"></i><div class="text-9">Locator</div></a></li>
+                    <li><a href="services.html" data-ajax="false" id="services" class="ui-button-active"><i class="text-16 fa fa-sign-language" aria-hidden="true"></i><div class="text-9">Services</div></a></li>
+                    <li><a href="bookmarks.html" data-ajax="false" id="bookmark"><i class="text-16 fa fa-bookmark" aria-hidden="true"></i><div class="text-9">Bookmark</div></a></a></li>
+                    <li><a href="contact-us.html" data-ajax="false" id="contactus"><i class="text-16 fa fa-envelope-o" aria-hidden="true"></i><div class="text-9">Contact Us</div></a></li>
                 </ul>
+            </div><!-- /navbar -->
+            <div  class="footer-text" >
+                Last Update: 15 Nov 2015 03:37:20 PM  | App v1.0 
             </div>
-        </div>
+        </div><!-- /footer -->
 
     </div><!-- /page -->
 
 
-    <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="js/vendor/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="js/vendor/jquery.mobile.custom.min.js"></script>
+<script type="text/javascript" src="cordova.js"></script>
+    
+        <script type="text/javascript" src="js/vendor/jquery-1.11.3.js"></script>
+        <script type="text/javascript" src="js/vendor/jquery.mobile-1.4.5.js"></script>  
     <script type="text/javascript" src="js/index.js"></script>
     <!-- <script type="text/javascript">
         app.initialize();
