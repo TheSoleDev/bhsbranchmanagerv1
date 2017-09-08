@@ -33,5 +33,26 @@ $('#map-screen').on('click','.btn-back',function(e) {
 });
 
 $('#map-screen').on('change',".rb-menu-map",function(e) { 
-    alert($("input[name*=radio-choice-]:checked").val());
+    //alert($("input[name*=radio-choice-]:checked").val());
+    if($("input[name*=radio-choice-]:checked").val() == 'all-branch'){
+        localStorage.removeItem('selected-branch');
+        localStorage.removeItem('selected-branch-id');
+        localStorage.removeItem('selected-branch-position');
+        window.location = 'map.html';
+    }
+    else if($("input[name*=radio-choice-]:checked").val() == 'nearby'){
+        var currentLoc = '';
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function (position) {
+                currentLoc = new google.maps.LatLng(position.coords.latitude,position.coords.longitude)
+                $('#map_canvas').gmap('addMarker', { 'position':currentLoc} );
+                $('#map_canvas').gmap({'center': position.coords.latitude + ", " + position.coords.longitude, 'zoom': 15, 'disableDefaultUI':true, });
+                $('#map_canvas').gmap('get','map').panTo(currentLoc);
+
+            });
+        }
+        $('#menu-panel').removeClass('ui-panel-open').addClass('ui-panel-close');
+    }
 });
+
+$('#map_canvas').css('height',(window.innerHeight) - 110 );

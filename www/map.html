@@ -4,19 +4,22 @@
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="msapplication-tap-highlight" content="no" />
-        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="css/vendor/jquery.mobile-1.4.5.css" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
 
         <title>Banahaw Heals Spa</title>
-                <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>        
-            
+
+        <link rel="stylesheet" href="css/vendor/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="css/vendor/jquery.mobile-1.4.5.css" />
+        <link rel="stylesheet" type="text/css" href="css/theme.css" />        
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" href="css/map.css" />
+
+        <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/vendor/jquery-1.11.3.js"></script>
-        <script type="text/javascript" src="js/vendor/jquery.mobile-1.4.5.js"></script>  
+        <script type="text/javascript" src="js/vendor/jquery.mobile-1.4.5.js"></script>   
     </head>
+
+
     <body>
 
         <div data-role="page"  class="page-bg" id="map-screen">
@@ -26,12 +29,12 @@
                 <div class="ui-panel-inner">
                     <a href="#" data-rel="close" class="ui-btn ui-btn-icon-right ui-icon-delete">Close</a>
                     <fieldset data-role="controlgroup">
-                        <input type="radio" name="radio-choice-1" class="rb-menu-map" id="rb-menu-map-1" value="current-branch" checked="checked">
-                        <label for="rb-menu-map-1">Show Selected Branch</label>
+                        <!-- <input type="radio" name="radio-choice-1" class="rb-menu-map" id="rb-menu-map-1" value="current-branch" checked="checked">
+                        <label for="rb-menu-map-1">Show Selected Branch</label> -->
                         <input type="radio" name="radio-choice-1" class="rb-menu-map" id="rb-menu-map-2" value="all-branch">
                         <label for="rb-menu-map-2">Show All Branch</label>
                         <input type="radio" name="radio-choice-1" class="rb-menu-map" id="rb-menu-map-3" value="nearby">
-                        <label for="rb-menu-map-3">Show 2Km near me</label>
+                        <label for="rb-menu-map-3">Show Near Me</label>
                     </fieldset> 
                 </div>
 
@@ -39,7 +42,7 @@
 
             <div data-role="header" id="applicationHeader" data-theme="b" data-position="fixed" data-tap-toggle="false" data-id="navStay">
                <a href="#" data-ajax="false" class="btn-back ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-arrow-l"> Back</a>               
-               <h1 class="ui-title page-title" role="heading" aria-level="1">Banahaw Heals Spa</h1>
+               <h1 class="ui-title page-title" role="heading" aria-level="1"><img src="img/header-logo.png"></h1>
                <!-- <a href="#" data-ajax="false" class="showAll ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-grid"> All</a> -->
                <a href="#menu-panel" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-grid" data-role="button" role="button">Menu</a>
             </div>
@@ -51,14 +54,14 @@
             <div data-role="footer" style="overflow:hidden;" data-position="fixed" data-tap-toggle="false">
                 <div data-role="navbar" id="footer-nav-item">
                     <ul>
-                        <li><a href="localtor.html" data-ajax="false" id="locator" class="ui-button-active"><i class="text-16 fa fa-search" aria-hidden="true"></i><div class="text-9">Locator</div></a></li>
+                        <li><a href="map.html" data-ajax="false" id="locator" class="ui-button-active"><i class="text-16 fa fa-search" aria-hidden="true"></i><div class="text-9">Locator</div></a></li>
                         <li><a href="services.html" data-ajax="false" id="services"><i class="text-16 fa fa-sign-language" aria-hidden="true"></i><div class="text-9">Services</div></a></li>
                         <li><a href="bookmarks.html" data-ajax="false" id="bookmark"><i class="text-16 fa fa-bookmark" aria-hidden="true"></i><div class="text-9">Bookmark</div></a></a></li>
                         <li><a href="contact-us.html" data-ajax="false" id="contactus"><i class="text-16 fa fa-envelope-o" aria-hidden="true"></i><div class="text-9">Contact Us</div></a></li>
                     </ul>
                 </div><!-- /navbar -->
-                <div  class="footer-text" >
-                    Last Update: 15 Nov 2015 03:37:20 PM  | App v1.0 
+                <div  class="footer-text text-11" >
+                    App v1.0.2 | Last Update: 08 Sept 2017 03:37:20 PM
                 </div>                
             </div><!-- /footer -->
         </div>
@@ -67,10 +70,8 @@
         <!-- Load map assets at bottom for performance -->
 
         <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyB5_0ZwfIlokhHU7Ysak1RX8HykuaUh3xg"></script>
-        <!-- <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>  -->
         <script type="text/javascript" src="js/vendor/jquery.gmap.js"></script>
         <script type="text/javascript" src="js/vendor/infobox_packed.js"></script>
-
      
         <script type="text/javascript" src="js/vendor/jquery.ui.map.js"></script>
         <script type="text/javascript" src="js/vendor/jquery.ui.map.services.js"></script>

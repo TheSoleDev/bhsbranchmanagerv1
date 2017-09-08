@@ -4,61 +4,51 @@
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="msapplication-tap-highlight" content="no" />
-        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+
+        <title>Banahaw Heals Spa</title>
+
         <link rel="stylesheet" href="css/vendor/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="css/vendor/jquery.mobile-1.4.5.css" />
         <link rel="stylesheet" type="text/css" href="css/theme.css" />        
         <link rel="stylesheet" type="text/css" href="css/index.css" />
 
-        <title>Banahaw Heals Spa</title>
-                <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>        
+        <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/vendor/jquery-1.11.3.js"></script>
-        <script type="text/javascript" src="js/vendor/jquery.mobile-1.4.5.js"></script>  
-
+        <script type="text/javascript" src="js/vendor/jquery.mobile-1.4.5.js"></script>             
     </head>
     <body>
 
-    <div data-role="page" class="page-bg">
-        <div class="ui-content dashboard-container" role="main">
-            <div class="button-wrap">
-                <div class="mb-60 mt-10">
-                    <img src="img/main_logo.png" width="100%">
+        <div data-role="page" class="page-bg" id="home-page">
+            <div class="ui-content dashboard-container" role="main">
+                <div class="button-wrap">
+                    <div class="mb-60 mt-10">
+                        <img src="img/main_logo.png" width="100%">
+                    </div>
+                    <div class="ui-grid-a">
+                       <a href="map.html" data-ajax="false" data-role="button" class="button btn-100perc btn-green btn-left"><i class="fa fa-search" aria-hidden="true"></i> Branch Locator</a>
+                    </div>
+                    <div class="ui-grid-a">
+                       <a href="services.html" data-ajax="false" data-role="button" class="button btn-100perc btn-green btn-left"><i class="fa fa-sign-language" aria-hidden="true"></i> Services</a>
+                    </div>                  
+                    <div class="ui-grid-a">
+                       <a href="bookmarks.html" data-ajax="false" data-role="button" class="button btn-100perc btn-green btn-left"><i class="fa fa-bookmark" aria-hidden="true"></i> Bookmarks</a>
+                    </div>
+                    <div class="ui-grid-a">
+                       <a href="about-us.html" data-ajax="false" data-role="button" class="button btn-100perc btn-green btn-left"><i class="fa fa-id-card-o" aria-hidden="true"></i> About Us</a>
+                    </div>                
+                    <div class="ui-grid-a">
+                       <a href="contact-us.html" data-ajax="false" data-role="button" class="button btn-100perc btn-green btn-left"><i class="fa fa-envelope-o" aria-hidden="true"></i> Contact Us</a>
+                    </div>    
                 </div>
-                <div class="ui-grid-a">
-                   <a href="branch.html" data-ajax="false" data-role="button" class="button btn-100perc btn-green btn-left"><i class="fa fa-search" aria-hidden="true"></i> Branch Locator</a>
-                </div>
-                <div class="ui-grid-a">
-                   <a href="services.html" data-ajax="false" data-role="button" class="button btn-100perc btn-green btn-left"><i class="fa fa-sign-language" aria-hidden="true"></i> Services</a>
-                </div>                  
-                <div class="ui-grid-a">
-                   <a href="bookmarks.html" data-ajax="false" data-role="button" class="button btn-100perc btn-green btn-left"><i class="fa fa-bookmark" aria-hidden="true"></i> Bookmarks</a>
-                </div>
-                <div class="ui-grid-a">
-                   <a href="about-us.html" data-ajax="false" data-role="button" class="button btn-100perc btn-green btn-left"><i class="fa fa-id-card-o" aria-hidden="true"></i> About Us</a>
-                </div>                
-                <div class="ui-grid-a">
-                   <a href="contact-us.html" data-ajax="false" data-role="button" class="button btn-100perc btn-green btn-left"><i class="fa fa-envelope-o" aria-hidden="true"></i> Contact Us</a>
-                </div>    
             </div>
+            <div data-role="footer" class="dashboard-footer text-center text-11">
+                Copyright &copy; 2017 | Powered by <a href="#" data-role="none" class="text-green no-underline">Active System</a><br />
+                App v1.0.2 | Last Update: 08 Sept 2017 03:37:20 PM
+            </div><!-- /footer -->
         </div>
-        <div data-role="footer" class="dashboard-footer text-center text-12">
-        App v1.0.2 | Copyright &copy; 2017 <br /> Powered by <a href="#" data-role="none">Active System</a>
-        
-        </div><!-- /footer -->
-    </div>
 
-        <!-- 
-        <div class="container_16">
-            <article class="grid_16">
-                <div class="item rounded dark">
-                    <div id="map_canvas" class="map rounded"></div>
-                </div>
-                <div id="radios" class="item gradient rounded shadow" style="margin:5px;padding:5px 5px 5px 10px;"></div>
-            </article>
-        </div>       -->
-    
+ 
         <script type="text/javascript" src="js/global.js"></script> 
         <script type="text/javascript" src="js/index.js"></script>        
         <script type="text/javascript">

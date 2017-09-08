@@ -58,13 +58,7 @@
 margin:0 auto;
 width: 40%;
 }
-#applicationHeader{
-    height: 50px;
-    background-color: #4CAF50 !important;
-    border-color: #4CAF50 !important;
-/*    min-height: 45px;
-    padding-top: 5px;*/
-}
+
 .ui-header-fixed .ui-btn-left, .ui-header-fixed .ui-btn-right{
 /*	margin-top: 3px;*/
 	font-size: 13px;

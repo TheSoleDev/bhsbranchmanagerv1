@@ -58,14 +58,14 @@ $( document ).on( "pagebeforeshow", "#map-screen", function() {
                 var value = branch.details;
             
                 arr_details_str = [];
-                arr_details_str.push('<strong>'+value.branch_name + '</strong><br />' + value.address);
+                arr_details_str.push('<strong>'+value.branch_name + '</strong><div class="mt-5">' + value.address+'</div>');
 
-                if(value.tel_no_1 != null)        arr_details_str.push('<strong>Telephone No.:</strong>'+value.tel_no_1);
-                if(value.mobile_no_1 != null)     arr_details_str.push('<strong>Mobile No.:</strong>'+value.mobile_no_1);
-                if(value.email_add != null)       arr_details_str.push('<strong>Email:</strong>'+value.email_add);
-                if(value.fb_url != null)          arr_details_str.push('<strong>Facebook:</strong>'+value.fb_url);
-
-                branch_address = arr_details_str.join('<br />');
+                if(value.tel_no_1 != null)        arr_details_str.push('<div class="mt-5"><strong>Telephone No.: </strong>'+value.tel_no_1+'</div>');
+                if(value.mobile_no_1 != null)     arr_details_str.push('<div class="mt-5"><strong>Mobile No.: </strong>'+value.mobile_no_1)+'</div>';
+                if(value.email_add != null)       arr_details_str.push('<div class="mt-5">strong>Email: </strong>'+value.email_add+'</div>');
+                if(value.fb_url != null)          arr_details_str.push('<div class="mt-5"><strong>Facebook: </strong>'+value.fb_url+'</div>');
+                arr_details_str.push('<div><a href="#" class="linkBranchDetails button-small btn-green" data-position="'+value.map_lat + ',' + value.map_long+'" data-branch="'+value.branch_name+'" data-id="'+value.id+'">Show Details</a></div>');
+                branch_address = arr_details_str.join('');
                 arr_option = {'icon': img_marker, 'tags':Array(value.province), 'bound':true, 'position': value.map_lat + ',' + value.map_long, 'title': branch_address};
 
                 if(selectedBranch != '')
@@ -108,16 +108,16 @@ $( document ).on( "pagebeforeshow", "#map-screen", function() {
     //     });
     // }
 
-    // // THIS IS FOR THE LOC SEARCH
-    //     $('#map_canvas').gmap('search', { 'address': 'quezon city, philippines' }, function(results,isFound) {
-    //         if (isFound) {
-    //             console.log(results[0].geometry.location.lat() + ' ' + results[0].geometry.location.lng());
-    //             // $('#map_canvas').gmap('get','map').panTo(results[0].geometry.location);
-    //             //14.6760413 121.04370029999995
-    //             $('#map_canvas').gmap('addMarker', { 'position':results[0].geometry.location} );
-
-    //         }
-    //     });
+    // THIS IS FOR THE LOC SEARCH
+        // $('#map_canvas').gmap('search', { 'address': 'quezon city, philippines' }, function(results,isFound) {
+        //     if (isFound) {
+        //         console.log(results[0].geometry.location.lat() + ' ' + results[0].geometry.location.lng());
+        //         // $('#map_canvas').gmap('get','map').panTo(results[0].geometry.location);
+        //         //14.6760413 121.04370029999995
+        //         $('#map_canvas').gmap('addMarker', { 'position':results[0].geometry.location} );
+        //         $('#map_canvas').gmap({'center': position.coords.latitude + ", " + position.coords.longitude, 'zoom': 12, 'disableDefaultUI':true, });
+        //     }
+        // });
 
     // var arr_nearestBranch = getNearestBranch(121.04370029999995, 14.6760413, 5);
 
@@ -129,6 +129,25 @@ $( document ).on( "pagebeforeshow", "#map-screen", function() {
     // }); 
 
 });
+
+$('#map-screen').on('click','.linkBranchDetails',function(e) { 
+
+    if(localStorage.getItem("selected-branch") != '')
+    {
+        localStorage.removeItem('selected-branch');
+        localStorage.removeItem('selected-branch-position');
+        localStorage.removeItem('reference-page');
+    }
+
+    localStorage.setItem("selected-branch-id", $(this).data('id'));
+    localStorage.setItem("selected-branch", $(this).data('branch'));
+    localStorage.setItem("selected-branch-position", $(this).data('position'));
+    localStorage.setItem("reference-page", 'branch.html');   
+
+    window.location = "#branch-info";
+
+});
+
 
 $('#map-screen').on('click','input:checkbox',function(e) { 
 

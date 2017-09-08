@@ -9,9 +9,27 @@
  -webkit-box-shadow: none !important;
  box-shadow: none !important;
 }
+.no-padding{
+    padding: 0px !important;
+}
+.logo-container .logo{
+    width: 100%;
+}
+
+.page-title{
+    margin: 0 10% !important;
+    font-size: 1em !important;
+}
+.inner-title{
+    text-shadow: 1px 2px 3px #ffffff;
+}
 .page-bg {
     /*background: url(../img/bg-medium-screen.png) #95e705 top repeat-x;*/
     height: 100%;
+}
+.logo-container{
+    margin:0 auto;
+    width: 40%;
 }
 .header-toolbar{
     height: 50px;
@@ -24,12 +42,19 @@
     min-height: 600px;
     background-color: #e7fded;
     padding: 15px !important;
-    margin: 60px 15px 60px 15px;
+    margin: 20px 15px 20px 15px;
 }
-.header-toolbar h1.ui-toolbar-title{
+
+#applicationHeader{
+    height: 40px;
+    background-color: #4CAF50 !important;
+    border-color: #4CAF50 !important;
+}
+
+#applicationHeader h1.ui-title{
     padding: 0px !important;
     margin: 0px !important;
-    margin-top: 8px !important;
+    margin-top: 3px !important;
     font-size: 16px !important;
     font-weight: bold;
 }
@@ -42,11 +67,195 @@
     bottom: 0px;    
 }
 
+.footer-text{
+    padding: 5px;
+    text-align: center;
+    font-size: 12px;
+    overflow:hidden;
+    color: #ffffff!important;
+    background-color: #1d1d1d !important;
+    border-color: #1b1b1b !important;
+    text-shadow: none!important;    font-weight: bold;  
+}
+.footer-navbar-item.ui-btn-active{
+    background-color: #1d1d1d !important;
+    border-color: #1b1b1b !important;
+}
+.footer-navbar-item-gradient{
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9dd53a+0,a1d54f+50,80c217+51,7cbc0a+100;Green+Gloss+%231 */
+    background: #9dd53a; /* Old browsers */
+    background: -moz-linear-gradient(top,  #9dd53a 0%, #a1d54f 50%, #80c217 51%, #7cbc0a 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #9dd53a 0%,#a1d54f 50%,#80c217 51%,#7cbc0a 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #9dd53a 0%,#a1d54f 50%,#80c217 51%,#7cbc0a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9dd53a', endColorstr='#7cbc0a',GradientType=0 ); /* IE6-9 */
+    border: 1px solid #ff0000;
+}
+
+.footer-navbar-item i{
+    font-size: 1.8em;
+    padding-bottom: 5px;
+
+}
+
+.footer-navbar-item label{
+    font-size: 1em;
+
+}
+
+.ui-header-fixed .ui-btn-left, .ui-header-fixed .ui-btn-right{
+/*  margin-top: 3px;*/
+    font-size: 13px;
+    line-height: 1.2;
+}
+
+
+/** General */
+.content { padding:1.5em; margin:0 0 1.5em; }
+.dark { background:#2a3333; }
+.light { background:#fff; }
+.hl { color: #ee2c74; }
+
+.gradient { background:#fff; background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eaeaea)); background: -moz-linear-gradient(top, #fff, #eaeaea); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff, endColorstr=#eaeaea); -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff, endColorstr=#eaeaea)"; }
+.map { position: absolute; width: 100%; height:100%;min-height:400px; }
+
+
+
+.shadow { -moz-box-shadow: 0px 2px 4px #999; -webkit-box-shadow: 0px 2px 4px #999; box-shadow: 0px 2px 4px #999; }
+.item { padding:1em; margin:0 0 2em; }
+
+
+
+.ui-bar-a{
+    border:0px;
+    background:none;
+}
+
+/* Active slider track */
+.ui-page-theme-a .ui-slider-track .ui-btn-active,
+html .ui-bar-a .ui-slider-track .ui-btn-active,
+html .ui-body-a .ui-slider-track .ui-btn-active,
+html body .ui-group-theme-a .ui-slider-track .ui-btn-active,
+html body div.ui-slider-track.ui-body-a .ui-btn-active {
+    background-color:       #ff0000 !important;
+    border-color:           #3388cc /*{a-active-border}*/;
+    color:                  #fff /*{a-active-color}*/;
+    text-shadow: 0 /*{a-active-shadow-x}*/ 1px /*{a-active-shadow-y}*/ 0 /*{a-active-shadow-radius}*/ #005599 /*{a-active-shadow-color}*/;
+}
+
+
+
+.tag-item h3 a{
+    line-height: 2;
+}
+.sub-item a{
+    line-height: 2;
+    font-size: 14px;
+}
+
+.ui-collapsible-heading-toggle{
+    padding-left: 40px;
+    font-size: 19px;
+    line-height: 2 !important;
+}
+.ui-input-text input, .ui-input-search input{
+    min-height: 3em;
+    font-size: 14px !important;
+}
+
+.about-container{
+
+    background-color: #ffffff;
+    min-width: 100%;
+    min-height: 450px;
+
+}
+.text-content{
+        padding: 0px 25px 25px;
+    font-size: 12px;
+    text-align: justify;
+}
+
+.contact-container{
+    background-color: #ffffff;
+    min-width: 100%;
+    min-height: 450px;
+
+}
+.contact-container .text-content{
+        padding:  10px 25px 25px;
+    font-size: 12px;
+    text-align: justify;
+}
+
+
+/* First breakpoint at 576px */
+/* Inherits mobile styles, but floats containers to make columns */
+@media all and (min-width: 769px){
+    .logo-container{
+        width: 20%;
+    }
+}
+
+/* Second breakpoint at 800px */
+/* Adjusts column proportions, tweaks base H1 */
+@media all and (max-width: 320px){
+    .page-title{
+        font-size: 15px !important;
+    }   
+    .dashboard-item a i{
+        font-size: 1.5em;
+        display: block;
+        padding-bottom: 10px;
+        color: #1f3b08;
+        text-shadow: 1px 2px 3px #666;
+    }
+    .dashboard-item a label{
+        font-size: 12px;
+    }
+
+    .ui-header-fixed .ui-btn-left, .ui-header-fixed .ui-btn-right{
+    margin-top: 3px;
+    font-size: 12px;
+
+}
+    .ui-collapsible-heading-toggle{
+        padding-left: 40px;
+        font-size: 15px;
+        line-height: 2 !important;
+    }
+    .footer-navbar-item i{
+        font-size: 14px;
+    }
+
+    .footer-navbar-item label{
+        font-size: 11px;
+
+    }   
+}
+
+
 
 
 
 /* [+] BUTTON STYLE */
+a.button-small , .button-small {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none !important;
+    display: inline-block;
+    text-transform: uppercase !important;
+    font-size: 12px;
+    margin: 4px 0px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;    
+    cursor: pointer;
+    border-radius: 0px !important;
+    letter-spacing: 1px;
 
+}
 a.button, .button {
     background-color: #4CAF50; /* Green */
     border: none;
@@ -240,6 +449,10 @@ a{
 }
 .text-right{
     text-align: right !important;
+}
+
+a.no-underline{
+    text-decoration: none !important;
 }
 
 .ui-button-corner-all, .ui-button.ui-corner-all, .ui-slider-track.ui-corner-all, .ui-flipswitch.ui-corner-all, .ui-listview-item-count-bubble{

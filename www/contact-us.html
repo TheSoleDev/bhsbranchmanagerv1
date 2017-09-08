@@ -4,24 +4,26 @@
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="msapplication-tap-highlight" content="no" />
-        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="css/vendor/jquery.mobile-1.4.5.css" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
 
         <title>Banahaw Heals Spa</title>
+
+        <link rel="stylesheet" href="css/vendor/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="css/vendor/jquery.mobile-1.4.5.css" />
+        <link rel="stylesheet" type="text/css" href="css/theme.css" />        
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
         <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>        
+        
         <script type="text/javascript" src="js/vendor/jquery-1.11.3.js"></script>
-        <script type="text/javascript" src="js/vendor/jquery.mobile-1.4.5.js"></script>  
+        <script type="text/javascript" src="js/vendor/jquery.mobile-1.4.5.js"></script>              
     </head>
     <body>
 
         <div data-role="page"  class="page-bg" id="promo-screen">
             <div data-role="header" id="applicationHeader" data-theme="b" data-position="fixed" data-tap-toggle="false" data-id="navStay">
-               <a href="index.html" data-ajax="false" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-home">Home </a>                  
-               <h1 class="ui-title page-title" role="heading" aria-level="1">Banahaw Heals Spa</h1>
+               <a href="index.html" data-ajax="false" class="btn-back ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-arrow-l"> Back</a>               
+               <h1 class="ui-title page-title" role="heading" aria-level="1"><img src="img/header-logo.png"></h1>
+
             </div>
             <div role="main" class="ui-content" data-position="fixed">
                 <div class="contact-container">
@@ -70,19 +72,27 @@
                 </div>
             </div>
             <div data-role="footer" style="overflow:hidden;" data-position="fixed" data-tap-toggle="false">
+                <div data-role="navbar" id="footer-nav-item">
+                    <ul>
+                        <li><a href="map.html" data-ajax="false" id="locator"><i class="text-16 fa fa-search" aria-hidden="true"></i><div class="text-9">Locator</div></a></li>
+                        <li><a href="services.html" data-ajax="false" id="services"><i class="text-16 fa fa-sign-language" aria-hidden="true"></i><div class="text-9">Services</div></a></li>
+                        <li><a href="bookmarks.html" data-ajax="false" id="bookmark"><i class="text-16 fa fa-bookmark" aria-hidden="true"></i><div class="text-9">Bookmark</div></a></a></li>
+                        <li><a href="contact-us.html" data-ajax="false" id="contactus" class="ui-button-active"><i class="text-16 fa fa-envelope-o" aria-hidden="true"></i><div class="text-9">Contact Us</div></a></li>
+                    </ul>
+                </div><!-- /navbar -->
                 <div  class="footer-text" >
-                    Last Update: 15 Nov 2015 03:37:20 PM  | App v1.0 
-                </div>                
+                    App v1.0.2 | Last Update: 08 Sept 2017 03:37:20 PM
+                </div>
             </div><!-- /footer -->
         </div>
      
 
-        <script type="text/javascript" src="js/global.js"></script>
-        <script type="text/javascript" src="js/promo.js"></script>    
 
+        <script type="text/javascript" src="js/global.js"></script> 
+       
         <script type="text/javascript">
 
         </script>
-
     </body>
+
 </html>
