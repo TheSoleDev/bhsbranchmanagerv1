@@ -1,9 +1,9 @@
 .page-bg {
-    background: url(../img/bg-medium-screen.png) #95e705 top repeat-x;
+    /*background: url(../img/bg-medium-screen.png) #95e705 top repeat-x;*/
     height: 100%;
 }
 .header-toolbar{
-    height: 42px;
+    height: 50px;
     background-color: #4CAF50 !important;
     border-color: #4CAF50 !important;
     position: fixed;
@@ -18,11 +18,13 @@
 .header-toolbar h1.ui-toolbar-title{
     padding: 0px !important;
     margin: 0px !important;
-    margin-top: 5px !important;
+    margin-top: 8px !important;
     font-size: 16px !important;
     font-weight: bold;
 }
-
+.header-toolbar .ui-toolbar-header-button-left{
+    margin-top: 5px;
+}
 .footer-toolbar{
     overflow: hidden;
     position: fixed;
