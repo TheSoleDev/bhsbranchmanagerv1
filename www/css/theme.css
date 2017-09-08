@@ -1,3 +1,7 @@
+.page-bg {
+    background: url(../img/bg-medium-screen.png) #95e705 top repeat-x;
+    height: 100%;
+}
 .header-toolbar{
     height: 42px;
     background-color: #4CAF50 !important;
@@ -210,6 +214,9 @@ a{
 .text-green{
     color: #4CAF50 !important;
 }
+.text-white{
+    color: #ffffff !important;
+}
 .text-center{
     text-align: center !important;
 }
@@ -228,6 +235,10 @@ a{
     border-color: #4CAF50 !important;
     color: #fff !important;
     text-shadow: 0 1px 0 #4CAF50 !important;
+}
+
+.ui-bar-a, .ui-page-theme-a .ui-bar-inherit, html .ui-bar-a .ui-bar-inherit, html .ui-body-a .ui-bar-inherit, html body .ui-group-theme-a .ui-bar-inherit{
+    text-shadow: none !important;
 }
 
 /* PADDING AND MARGIN*/
