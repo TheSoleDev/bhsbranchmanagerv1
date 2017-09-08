@@ -9,7 +9,7 @@ var arr_provinces = [];
 var arr_branches = [];
 
 
-    $.getJSON("http://branchmanager.local/data/fetchbranches").done(function(data){
+    $.getJSON("http://app.banahawhealsspabranches.com/data/fetchbranches").done(function(data){
 
         
         $.each(data, function(index_main, main_data){
@@ -25,7 +25,7 @@ var arr_branches = [];
     });
 
 
-    $.getJSON("http://branchmanager.local/data/fetchprovinces").done(function(data){
+    $.getJSON("http://app.banahawhealsspabranches.com/data/fetchprovinces").done(function(data){
         $.each(data, function(index, value){
             arr_provinces.push(value.province); 
 
