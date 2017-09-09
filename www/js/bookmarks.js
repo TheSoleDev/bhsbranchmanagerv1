@@ -8,16 +8,18 @@ $( document ).on( "pagebeforeshow", "#bookmarks-page", function() {
 
 function initBookmarks(){
 	var arr_str = [];
-	$.each(JSON.parse(localStorage.getItem('bookmarks')), function(key, value) {
-		
-		var branch_info = getBranchDetailsById(value);
+	if (localStorage.getItem("bookmarks") !== null) {
+		$.each(JSON.parse(localStorage.getItem('bookmarks')), function(key, value) {
+			
+			var branch_info = getBranchDetailsById(value);
 
-		arr_str.push('<li><a href="#" class="link-BranchInfo" data-ajax="false" data-position="'+branch_info.details.map_lat + ',' + branch_info.details.map_long+'" data-branch="'+branch_info.details.branch_name+'" data-id="'+branch_info.details.id+'"><h2>'+branch_info.details.branch_name+'</h2></a>');
-                        arr_str.push('<a href="#actionModal" class="link-openModal" data-rel="popup" data-position-to="window" data-transition="pop"  data-position="'+branch_info.details.map_lat + ',' + branch_info.details.map_long+'" data-branch="'+branch_info.details.branch_name+'" data-id="'+branch_info.details.id+'"></a>');
-        arr_str.push('</li>');
-	});
+			arr_str.push('<li><a href="#" class="link-BranchInfo" data-ajax="false" data-position="'+branch_info.details.map_lat + ',' + branch_info.details.map_long+'" data-branch="'+branch_info.details.branch_name+'" data-id="'+branch_info.details.id+'"><h2>'+branch_info.details.branch_name+'</h2></a>');
+	                        arr_str.push('<a href="#actionModal" class="link-openModal" data-rel="popup" data-position-to="window" data-transition="pop"  data-position="'+branch_info.details.map_lat + ',' + branch_info.details.map_long+'" data-branch="'+branch_info.details.branch_name+'" data-id="'+branch_info.details.id+'"></a>');
+	        arr_str.push('</li>');
+		});
 
-	$('#bookmarks-item').html(arr_str.join('')).listview('refresh'); 	
+		$('#bookmarks-item').html(arr_str.join('')).listview('refresh'); 	
+	}
 }
 
 $('#bookmarks-page').on('click','.btn-removeBookmark',function(e) { 
