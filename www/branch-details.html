@@ -23,11 +23,11 @@
             <div data-role="header" id="applicationHeader" data-theme="b" data-position="fixed" data-tap-toggle="false" data-id="navStay">
                <a href="map.html" data-ajax="false" class="btn-back ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-arrow-l"> Back</a>               
                <h1 class="ui-title page-title" role="heading" aria-level="1"><img src="img/header-logo.png"></h1>
-               <a href="#" ><i class="fa fa-bookmark" aria-hidden="true"></i></a>
+               <a href="#" class="btn-bookmark btn-addToBookmark" data-branchid=""><i class="fa fa-bookmark-o" aria-hidden="true"></i></a>
             </div>
             <div role="main" class="ui-content" data-position="fixed">
                 <div style="text-align: center;">
-                    <img src="img/default_photo.jpg" id="branch_cover_image" style="max-height: 270px; margin: 0 auto; " />
+                    <img src="" id="branch_cover_image" style="max-height: 270px; margin: 0 auto; " />
                 </div>
                 <div style="text-align: center;">
                     <h4 id="branch_name" class="mt-10 mb-5"></h4>
@@ -35,19 +35,35 @@
                     <hr />
                 </div>
                 <div id="contact_details"></div>
-<!--                 <ul data-role="listview">
-                    <li>
-                        <ul id="branch-details">
+                <div data-role="collapsibleset" data-theme="a" data-content-theme="a" data-inset="false">
+                    <div data-role="collapsible">
+                        <h5>Photo Gallery</h5>
+                        <div id="photoGalleryContainer">
 
-                        </ul>
-                        <div id="branch-photo-list"> 
                         </div>
-
                         <div data-role="popup" id="popupPhotoLarge" data-overlay-theme="b" data-theme="b" data-corners="false" data-tolerance="30,15">
-                            <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" id="img-large-photo" src="" alt="">
-                        </div>
+                            <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+                            <img class="popphoto" id="img-large-photo" src="" alt="">
+                            <p class="img-caption"></p>
+                        </div>                        
+                    </div>
+                    <div data-role="collapsible">
+                        <h5>Promos</h5>
+                        <div id="promoContainer">
 
-                    </li>
+                        </div>
+                        <div data-role="popup" id="popupPromoLarge" data-overlay-theme="b" data-theme="b" data-corners="false" data-tolerance="30,15">
+                            <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+                            <img class="popphoto" id="img-large-promo" src="" alt="">
+                            <p class="img-caption"></p>
+                        </div>                           
+                    </div>
+
+                    <div class="mt-20 text-center">
+                        <a href="contact-us.html" data-ajax="false" data-role="button" class="button btn-darkgray btn-left text-16 pr-30 mt-5 mb-5"><i class="fa fa-envelope-o" aria-hidden="true"></i> Send Feedback</a>
+                    </div>
+                </div>
+                <!-- <ul data-role="listview" class="mt-20">
                     <li><a href="#" data-ajax="false" class="showmap ui-btn ui-shadow ui-corner-all ui-icon-location ui-btn-icon-right">View Map</a></li>
                     <li><a href="#" data-ajax="false" class="showPromo ui-btn ui-shadow ui-corner-all ui-icon-shop ui-btn-icon-right">Promos</a></li>
                     <li><a href="#" data-ajax="false" class="ui-btn ui-shadow ui-corner-all ui-icon-calendar ui-btn-icon-right">Add Reservation</a></li>
