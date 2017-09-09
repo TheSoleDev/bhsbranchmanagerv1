@@ -42,14 +42,19 @@ $('#map-screen').on('change',".rb-menu-map",function(e) {
     }
     else if($("input[name*=radio-choice-]:checked").val() == 'nearby'){
         var currentLoc = '';
-        if (navigator.geolocation) {
+        if (navigator && navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(function (position) {
-                currentLoc = new google.maps.LatLng(position.coords.latitude,position.coords.longitude)
-                $('#map_canvas').gmap('addMarker', { 'position':currentLoc} );
-                $('#map_canvas').gmap({'center': position.coords.latitude + ", " + position.coords.longitude, 'zoom': 15, 'disableDefaultUI':true, });
-                $('#map_canvas').gmap('get','map').panTo(currentLoc);
+                if(position.coords.latitude != '' && position.coords.longitude != '' ){
+                    currentLoc = new google.maps.LatLng(position.coords.latitude,position.coords.longitude)
+                    $('#map_canvas').gmap('addMarker', { 'position':currentLoc} );
+                    $('#map_canvas').gmap({'center': position.coords.latitude + ", " + position.coords.longitude, 'zoom': 15, 'disableDefaultUI':true, });
+                    $('#map_canvas').gmap('get','map').panTo(currentLoc);
+                }
+                else{
+                    alert('fsdf');
+                }
 
-            });
+            },showError);
         }
         else{
             alert('Your location cannot be determined. ');
@@ -57,5 +62,22 @@ $('#map-screen').on('change',".rb-menu-map",function(e) {
         $('#menu-panel').removeClass('ui-panel-open').addClass('ui-panel-close');
     }
 });
+
+function showError(error) {
+  switch(error.code) {
+    case error.PERMISSION_DENIED:
+      alert("User denied the request for Geolocation.");
+      break;
+    case error.POSITION_UNAVAILABLE:
+      alert("Your location cannot be determined.");
+      break;
+    case error.TIMEOUT:
+      alert("The request to get user location timed out.");
+      break;
+    case error.UNKNOWN_ERROR:
+      alert("An unknown error occurred.");
+      break;
+  }
+}
 
 $('#map_canvas').css('height',(window.innerHeight) - 110 );
