@@ -3,7 +3,9 @@ $( document ).on( "pagebeforeshow", "#bookmarks-page", function() {
 	
     
 	initBookmarks();
-
+    localStorage.removeItem("selected-branch-id");
+    localStorage.removeItem("selected-branch");
+    localStorage.removeItem("selected-branch-position");    
 });
 
 function initBookmarks(){

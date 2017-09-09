@@ -5,6 +5,7 @@ $( document ).on( "pagebeforeshow", "#home-page", function() {
 	$('.button-wrap').hide();
 	initData();
 	initIndex();
+	$('.data_version').html(data_version_date);
 
 });
 
@@ -22,15 +23,19 @@ function initIndex(){
 			console.log('here');
 		}, 1000);
 	}
+
+    localStorage.removeItem("selected-branch-id");
+    localStorage.removeItem("selected-branch");
+    localStorage.removeItem("selected-branch-position");	
 }
 
 
-    $(document).on( "pagebeforecreate", function( event ) { 
-        
-    });
+$(document).on( "pagebeforecreate", function( event ) { 
+    
+});
 
-    function loading(showOrHide, delay) {
-      setTimeout(function() {
-        $.mobile.loading(showOrHide, { theme: "a", text: "Loading..", textonly: false,textVisible: true});
-      }, delay);
-    }
+function loading(showOrHide, delay) {
+  setTimeout(function() {
+    $.mobile.loading(showOrHide, { theme: "a", text: "Loading..", textonly: false,textVisible: true});
+  }, delay);
+}

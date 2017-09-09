@@ -104,6 +104,7 @@ $('#branch-details-page').on('click','.btn-addToBookmark',function(e) {
         if (localStorage.getItem("bookmarks") === null) {
             arr_bookmark_items.push(branch_id);
             localStorage.setItem("bookmarks", JSON.stringify(arr_bookmark_items));
+            alert('Added to your Bookmarks');
         } 
         else{
               $.each(JSON.parse(localStorage.getItem('bookmarks')), function(key, value) {
