@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+
+        <title>Banahaw Heals Spa</title>
+
+        <link rel="stylesheet" href="css/vendor/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="css/vendor/jquery.mobile-1.4.5.css" />
+        <link rel="stylesheet" type="text/css" href="css/theme.css" />        
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <script type="text/javascript" src="cordova.js"></script>
+        
+        <script type="text/javascript" src="js/vendor/jquery-1.11.3.js"></script>
+        <script type="text/javascript" src="js/vendor/jquery.mobile-1.4.5.js"></script>              
+    </head>
+    <body>
+
+        <div data-role="page"  class="page-bg" id="contactus-page">
+            <div data-role="header" id="applicationHeader" data-theme="b" data-position="fixed" data-tap-toggle="false" data-id="navStay">
+               <a href="index.html" data-ajax="false" class="btn-back ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-home"> Home</a>                    
+               <h1 class="ui-title page-title" role="heading" aria-level="1"><img src="img/header-logo.png"></h1>
+
+            </div>
+            <div role="main" class="ui-content" data-position="fixed">
+                <div class="contact-container">
+                             
+                    <div class="text-content">
+                        <h2>CONTACT US</h2>
+                        <p><strong>For any inquiries, comments, and suggestions.</strong></p>
+                        <br />
+                        <form>
+                        <p>
+                            <label for="contact-type" class="select">Contacting us about?</label>
+                            <select name="contact-type" id="contact-type">
+                                <option value="Inquiries">Inquiries</option>
+                                <option value="Suggestions">Suggestions</option>
+                                <option value="Complaints">Complaints</option>
+                                <option value="Franchise">Franchise</option>
+                            </select>
+                        </p>
+                        <p>
+                            <label for="txt_branch_name">Branch Name:</label>
+                            <input type="text" name="txt_branch_name" id="txt_branch_name" value="">
+                        </p>                        
+                        <p>
+                            <label for="txt_fullname">Full name:</label>
+                            <input type="text" name="txt_fullname" id="txt_fullname" value="">
+                        </p>
+                        <p>
+                            <label for="txt_email">Email address:</label>
+                            <input type="email" name="txt_email" id="txt_email" value="">
+                        </p>                        
+                        <p>
+                            <label for="mobile_no">Mobile No.:</label>
+                            <input type="tel" name="mobile_no" id="mobile_no" value="">
+                        </p>
+                        <p>
+                            <label for="txt_message">Message:</label>
+                            <textarea cols="40" rows="10" name="txt_message" id="txt_message"></textarea>
+                        </p>
+                        <br />
+                        <p>
+                            
+                            <button type="submit" class="ui-btn ui-shadow ui-corner-all ui-btn-b">Submit</button>
+                        </p>
+                        </form>
+                    </div>        
+                </div>
+            </div>
+            <div data-role="footer" style="overflow:hidden;" data-position="fixed" data-tap-toggle="false">
+                <div data-role="navbar" id="footer-nav-item">
+                    <ul>
+                        <li><a href="map.html" data-ajax="false" id="locator"><i class="text-16 fa fa-search" aria-hidden="true"></i><div class="text-9">Locator</div></a></li>
+                        <li><a href="services.html" data-ajax="false" id="services"><i class="text-16 fa fa-sign-language" aria-hidden="true"></i><div class="text-9">Services</div></a></li>
+                        <li><a href="bookmarks.html" data-ajax="false" id="bookmark"><i class="text-16 fa fa-bookmark" aria-hidden="true"></i><div class="text-9">Bookmark</div></a></a></li>
+                        <li><a href="contact-us.html" data-ajax="false" id="contactus" class="ui-button-active"><i class="text-16 fa fa-envelope-o" aria-hidden="true"></i><div class="text-9">Contact Us</div></a></li>
+                    </ul>
+                </div><!-- /navbar -->
+                <!-- <div  class="footer-text" >
+                    App v1.0.2 | Last Update: <span class="data_version"></span>
+                </div> -->
+            </div><!-- /footer -->
+        </div>
+     
+
+
+        <script type="text/javascript" src="js/global.js"></script> 
+        <script type="text/javascript" src="js/contact_us.js"></script> 
+       
+        <script type="text/javascript">
+
+        </script>
+    </body>
+
+</html>
