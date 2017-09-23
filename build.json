@@ -1,0 +1,11 @@
+{
+	"android":{
+		"release":{
+			"keystore":"bhsbranchlocator.keystore",
+			"storepassword":"bhs2017",
+			"alias":"bhsbranchlocator-key",
+			"password":"bhs2017",
+			"keystoreType":""
+		}
+	}
+}
