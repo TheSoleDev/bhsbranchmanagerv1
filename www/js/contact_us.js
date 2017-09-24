@@ -46,7 +46,7 @@ $('#contactus-page').on('click','#btn-submit-contact',function(e) {
      
             if (data.status=='success') {
             	alert('Your message has been successfully sent.');
-                 window.location = 'contact_us.html';
+                 window.location = 'contact-us.html';
             } else {
                  alert('Send Failed. Please try again.');
             }
