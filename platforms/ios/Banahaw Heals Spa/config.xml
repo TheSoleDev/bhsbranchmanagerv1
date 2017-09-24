@@ -118,6 +118,15 @@
     <splash height="480" platform="ios" src="www/res/screen/ios/Default~iphone.png" width="320" />
     <allow-intent href="itms:*" />
     <allow-intent href="itms-apps:*" />
+    <config-file parent="NSLocationWhenInUseUsageDescription" target="*-Info.plist">
+        <string />
+    </config-file>
+    <config-file parent="NSCameraUsageDescription" target="*-Info.plist">
+        <string />
+    </config-file>
+    <config-file parent="NSPhotoLibraryUsageDescription" target="*-Info.plist">
+        <string />
+    </config-file>
     <preference name="AllowInlineMediaPlayback" value="false" />
     <preference name="BackupWebStorage" value="cloud" />
     <preference name="DisallowOverscroll" value="true" />

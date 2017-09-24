@@ -1,5 +1,63 @@
+$(document).on("pagebeforeshow", "#map-screen",function(event){    
+
+    var arr_str = [];   
+
+
+       var provinces = JSON.parse(localStorage.getItem('provinces'));
+       var branches = JSON.parse(localStorage.getItem('branches_data')); 
+
+    $('#list-branch').html('');
+
+    branches.sort();
+
+    $.each(branches, function(key, value) {
+        arr_str.push('<li data-filtertext="'+ value.details.branch_name + '"><a href="#" class="showDetails" data-position="'+value.details.map_lat + ',' + value.details.map_long+'" data-branch="'+value.details.branch_name+'" data-id="'+value.details.id+'">'+value.details.branch_name+'</a></li>');    
+    });
+
+
+    // $.each(provinces, function(i, tag) {
+
+    //     var filtertext = '';
+
+    //     $.each(branches, function(key, value) {
+
+    //         if(value.details.province == tag){
+    //            filtertext = filtertext + ' ' + value.details.branch_name;
+    //           // console.log(filtertext);
+    //         }
+
+    //     });
+
+    //     arr_str.push('<div data-role="collapsible" class="tag-item" data-filtertext="'+tag + ' ' + filtertext + '">');
+    //         arr_str.push('<h3>'+tag+'</h3>');
+    //         arr_str.push('<ul data-role="listview"  data-inset="false">');
+
+    //             $.each(branches, function(key, value) {
+
+    //                 if( tag == value.details.province){
+    //                     if(value.details.map_lat != null && value.details.map_long != null)
+    //                     {
+    //                         arr_str.push('<li class="sub-item" data-filtertext="'+tag + ' ' + value.details.branch_name + '"><a href="#" class="showDetails" data-position="'+value.details.map_lat + ',' + value.details.map_long+'" data-branch="'+value.details.branch_name+'" data-id="'+value.details.id+'">'+value.details.branch_name+'</a></li>');
+    //                     }
+    //                 }
+                    
+    //             });
+
+    //         arr_str.push('</ul>');
+    //     arr_str.push('</div>');
+
+    // });
+
+      
+    //$('#list-branch').append(arr_str.join('')).trigger('create');
+    $('#list-branch').append(arr_str.join('')).listview('refresh'); 
+});
 
 $( document ).on( "pagebeforeshow", ".pageload", function() {
+
+
+
+
         
     // var arr_str = [];   
 
@@ -15,6 +73,23 @@ $( document ).on( "pagebeforeshow", ".pageload", function() {
 
 });
 
+$('#map-screen').on('click','.showDetails',function(e) { 
+
+    if(localStorage.getItem("selected-branch") != '')
+    {
+        localStorage.removeItem('selected-branch');
+        localStorage.removeItem('selected-branch-position');
+        localStorage.removeItem('reference-page');
+    }
+
+    localStorage.setItem("selected-branch-id", $(this).data('id'));
+    localStorage.setItem("selected-branch", $(this).data('branch'));
+    localStorage.setItem("selected-branch-position", $(this).data('position'));
+    localStorage.setItem("reference-page", 'branch.html');   
+
+    window.location = "map.html";
+
+});
 
 $('#map-screen').on('click','.showAll',function(e) { 
     localStorage.removeItem('selected-branch');
@@ -31,6 +106,15 @@ $('#map-screen').on('click','.btn-back',function(e) {
     }
     window.location = backLink;
 });
+
+$('#map-screen').on('click','.btn-show-all',function(e) { 
+    
+        localStorage.removeItem('selected-branch');
+        localStorage.removeItem('selected-branch-id');
+        localStorage.removeItem('selected-branch-position');
+        window.location = 'map.html';
+});
+
 
 $('#map-screen').on('change',".rb-menu-map",function(e) { 
     //alert($("input[name*=radio-choice-]:checked").val());
